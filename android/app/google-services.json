@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "838636446142",
+    "firebase_url": "https://c-hub-b69b9.firebaseio.com",
+    "project_id": "c-hub-b69b9",
+    "storage_bucket": "c-hub-b69b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838636446142:android:aab16a4551fc1f39",
+        "android_client_info": {
+          "package_name": "com.example.animap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838636446142-8c5sifjc2d1smft3uisdf46ekgr585uj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIBzuMAznve5KGjGrx381lDaaCeOdLNKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838636446142-8c5sifjc2d1smft3uisdf46ekgr585uj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838636446142:android:7c044e2fce058624",
+        "android_client_info": {
+          "package_name": "com.example.v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838636446142-8c5sifjc2d1smft3uisdf46ekgr585uj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIBzuMAznve5KGjGrx381lDaaCeOdLNKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838636446142-8c5sifjc2d1smft3uisdf46ekgr585uj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
