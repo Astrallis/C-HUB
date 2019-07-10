@@ -9,8 +9,8 @@ class CClasses extends StatelessWidget{
   @override
 
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width/423.5293998850261;
+    double height = MediaQuery.of(context).size.height/704.705862586474;
     return Scaffold(
         backgroundColor:Colors.black,
         body: CustomScrollView(slivers: <Widget>[
@@ -19,7 +19,7 @@ class CClasses extends StatelessWidget{
               floating: false,
               pinned: false,
               backgroundColor: Color(0x00000000),
-              expandedHeight: height/1.761764656,
+              expandedHeight: height*400,
               flexibleSpace: FlexibleSpaceBar(
                 background: Padding(
                   padding: const EdgeInsets.only(top: 1),
@@ -33,14 +33,14 @@ class CClasses extends StatelessWidget{
                             child: RotatedBox(
                                 quarterTurns: 2,
                                 child: Container(
-                                  width: width/5.294117499,
+                                  width: width*80,
                                   child: Image.asset("assets/goright.gif"),
                                 )),
                           ),
                         ),
                       ),
                       Container(
-                          height:height/1.761764656/4*3 ,
+                          height:height*300 ,
                           child: Image.asset("assets/c classes logo.png")),
                       Expanded(
                         child: Container(
@@ -49,7 +49,7 @@ class CClasses extends StatelessWidget{
                             child: RotatedBox(
                                 quarterTurns: 0,
                                 child: Container(
-                                  width: width/5.294117499,
+                                  width: width*80,
                                   child: Image.asset("assets/goright.gif"),
                                 )),
                           ),
@@ -60,7 +60,7 @@ class CClasses extends StatelessWidget{
                 ),
               )),
           SliverFixedExtentList(
-              itemExtent: height/0.640641693+50,
+              itemExtent: 1500,
               delegate: SliverChildListDelegate([
                 Scaffold(
                   backgroundColor: Colors.black,
@@ -69,14 +69,14 @@ class CClasses extends StatelessWidget{
                     body: Column(
                       children: <Widget>[
                         Container(
-                          width: width,
+                          width: width*423.5293998850261,
                           color: Color(0xff1b1b1b),
                           child: Column(
                             children: <Widget>[
                               Padding(
                                 padding: const EdgeInsets.only(top: 10),
                                 child: Container(
-                                  height: height/1.761764656/5,
+                                  height: height*80,
                                   child: Row(
                                     children: <Widget>[
                                       Padding(
@@ -84,7 +84,7 @@ class CClasses extends StatelessWidget{
                                             left: 10.0),
                                         child: Container(
                                             width: 6,
-                                            height: height/1.761764656/8,
+                                            height: height*50,
                                             color: Color(0xff860000)),
                                       ),
                                       Padding(
@@ -94,7 +94,7 @@ class CClasses extends StatelessWidget{
                                           "C Classes",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
-                                              fontSize: height/1.761764656/40*3,
+                                              fontSize: width*30,
                                               color: Colors.white),
                                         ),
                                       ),
@@ -107,8 +107,8 @@ class CClasses extends StatelessWidget{
                                               padding: EdgeInsets.only(
                                                   right: 10),
                                               child: Container(
-                                                height: 50,
-                                                width: 50,
+                                                height: width*50,
+                                                width: width*50,
                                                 child: Image.asset(
                                                     "assets/godown.gif"),
                                               ),
@@ -129,7 +129,7 @@ class CClasses extends StatelessWidget{
                                         "There is a saying, ''Talk is cheap.Show me the Code.'' So here is a chance for you to learn CODING.\n\nCONATUS is organizes C classes for first year students.\n\nSo grab your chance and register as soon as possible as there will be limited number of seats.\n\nPriority is given on first come first serve basis.",
                                         style: TextStyle(
                                             color: Colors.white70,
-                                            fontSize: height/1.761764656/400*17),
+                                            fontSize: width*17),
                                       ),
                                     ),
                                   )),

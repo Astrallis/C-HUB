@@ -8,8 +8,8 @@ class AboutCoordinator extends StatelessWidget{
   final CoordinatorModel coordinatorModel;
   AboutCoordinator({Key key, @required this.coordinatorModel}): super(key: key);
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width/423.5293998850261;
+    double height = MediaQuery.of(context).size.height/704.705862586474;
 
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.black,),
@@ -19,7 +19,7 @@ class AboutCoordinator extends StatelessWidget{
         child: Column(
           children: <Widget>[
             Padding(
-              padding:  EdgeInsets.only(top: height/35.23529313/2),
+              padding:  EdgeInsets.only(top:10),
               child: Row(
                 children: <Widget>[
                   Container(
@@ -27,8 +27,8 @@ class AboutCoordinator extends StatelessWidget{
                         child: Container(
                             child: Center(
                               child: Container(
-                                width: height/35.23529313*10-10,
-                                height: height/35.23529313*10-10,
+                                width: width*190,
+                                height: width*190,
                                 padding: const EdgeInsets.all(2.0), // borde width
                                 decoration: new BoxDecoration(
                                   color: const Color(0xFF000000), // border color
@@ -38,14 +38,14 @@ class AboutCoordinator extends StatelessWidget{
                                   tag: 'dash'+coordinatorModel.index.toString()+coordinatorModel.year.toString(),
                                   child: CircleAvatar(
                                     backgroundImage: NetworkImage(coordinatorModel.imgurl),
-                                    radius: height/35.23529313*10/2,
+                                    radius: width*100,
                                   ),
                                 ),
 
                               ),
                             ),
-                            width: height/35.23529313*10+5,
-                            height: height/35.23529313*10+5,
+                            width: width*205,
+                            height: width*205,
                             padding: const EdgeInsets.all(2.0), // borde width
                             decoration: new BoxDecoration(
                               color: const Color(0xFF000000), // border color
@@ -53,8 +53,8 @@ class AboutCoordinator extends StatelessWidget{
                             )
                         ),
                       ),
-                      width: height/35.23529313*10+10,
-                      height: height/35.23529313*10+10,
+                      width: width*210,
+                      height: width*210,
                       padding: const EdgeInsets.all(2.0), // borde width
                       decoration: new BoxDecoration(
                         color: const Color(0xFFFFFFFF), // border color
@@ -62,28 +62,28 @@ class AboutCoordinator extends StatelessWidget{
                       )
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left:width/42.35293999),
+                    padding: EdgeInsets.only(left:10),
                     child: Container(
                       child: Center(
                         child: Column(
                           children: <Widget>[
                             Padding(
-                              padding: EdgeInsets.only(top: height/35.23529313*1.5),
-                              child: Container(width: width/42.35293999*20,child: Text(coordinatorModel.name,textAlign:TextAlign.center,style: TextStyle(color: Colors.white,fontSize: height/35.23529313*1.5,),)),
+                              padding: EdgeInsets.only(top: 30),
+                              child: Container(width: width*200,child: Text(coordinatorModel.name,textAlign:TextAlign.center,style: TextStyle(color: Colors.white,fontSize: width*30,),)),
                             ),
                             if(coordinatorModel.year==3)
                               Padding(
-                                padding: EdgeInsets.all(height/35.23529313/2),
-                                child: Text("Coordinator "+coordinatorModel.year.toString()+"rd Year",style: TextStyle(color: Colors.white70, fontSize: height/35.23529313-2,),),
+                                padding: EdgeInsets.all(10),
+                                child: Text("Coordinator "+coordinatorModel.year.toString()+"rd Year",style: TextStyle(color: Colors.white70, fontSize:width*18,),),
                               ),
                             if(coordinatorModel.year==4)
                               Padding(
-                                padding: EdgeInsets.all(height/35.23529313/2),
-                                child: Text("Coordinator "+coordinatorModel.year.toString()+"th Year",style: TextStyle(color: Colors.white70, fontSize: height/35.23529313-2,),),
+                                padding: EdgeInsets.all(10),
+                                child: Text("Coordinator "+coordinatorModel.year.toString()+"th Year",style: TextStyle(color: Colors.white70, fontSize: width*18,),),
                               ),
 
                             Padding(
-                              padding: EdgeInsets.all(height/35.23529313/2),
+                              padding: EdgeInsets.all(10),
                               child: Text(coordinatorModel.ocp,style: TextStyle(color: Colors.white),),
                             ),
                           ],
@@ -98,25 +98,25 @@ class AboutCoordinator extends StatelessWidget{
             Center(
 
               child: Padding(
-                padding: EdgeInsets.only(top:height/35.23529313*2,right: width/42.35293999*2,left: width/42.35293999*2),
-                child: Container(child: Text(coordinatorModel.abt,textAlign:TextAlign.center,style: TextStyle(color: Color(0xcfffffff),fontSize: 17),)),
+                padding: EdgeInsets.only(top:40,right: 20,left: 20),
+                child: Container(child: Text(coordinatorModel.abt,textAlign:TextAlign.center,style: TextStyle(color: Color(0xcfffffff),fontSize: width*17),)),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top:height/35.23529313),
+              padding: EdgeInsets.only(top:20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.only(top:height/35.23529313/2,bottom: height/35.23529313/2,left: width/42.35293999),
+                    padding: EdgeInsets.only(top:10,bottom: 10,left: 10),
                     child: Container(
                       child: Icon(Icons.mail_outline,color: Colors.white54,),
                     ),
                   ),
 
                   Padding(
-                    padding: EdgeInsets.all(height/35.23529313/2),
-                    child: Text(coordinatorModel.mail,style: TextStyle(color: Colors.white54, fontSize: height/35.23529313-4),),
+                    padding: EdgeInsets.all(10),
+                    child: Text(coordinatorModel.mail,style: TextStyle(color: Colors.white54, fontSize: width*16),),
                   ),
                 ],
               ),

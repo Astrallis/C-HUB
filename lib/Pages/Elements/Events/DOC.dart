@@ -14,8 +14,8 @@ class DOC extends StatelessWidget{
   @override
 
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width/423.5293998850261;
+    double height = MediaQuery.of(context).size.height/704.705862586474;
     // TODO: implement build
     return Scaffold(
         backgroundColor:Colors.black,
@@ -25,10 +25,10 @@ class DOC extends StatelessWidget{
               floating: false,
               pinned: false,
               backgroundColor: Color(0x00000000),
-              expandedHeight: height/1.761764656,
+              expandedHeight: height*400,
               flexibleSpace: FlexibleSpaceBar(
                 background: Padding(
-                  padding: EdgeInsets.only(top: height/1.761764656/400),
+                  padding: EdgeInsets.only(top: 1),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -38,7 +38,7 @@ class DOC extends StatelessWidget{
                         ),
                       ),
                       Container(
-                          height:height/1.761764656/4*3 ,
+                          height:width*300 ,
                           child: Image.asset("assets/doc logo.png")),
                       Expanded(
                         child: Container(
@@ -47,7 +47,7 @@ class DOC extends StatelessWidget{
                             child: RotatedBox(
                                 quarterTurns: 0,
                                 child: Container(
-                                  width: width/5.294117499,
+                                  width: width*80,
                                   child: Image.asset("assets/goright.gif"),
                                 )),
                           ),
@@ -58,7 +58,7 @@ class DOC extends StatelessWidget{
                 ),
               )),
           SliverFixedExtentList(
-              itemExtent: height/0.454648943,
+              itemExtent: 2000,
               delegate: SliverChildListDelegate([
                 Scaffold(
                   backgroundColor: Colors.black,
@@ -67,14 +67,14 @@ class DOC extends StatelessWidget{
                     body: Column(
                       children: <Widget>[
                         Container(
-                          width: width,
+                          width: width*423.5293998850261,
                           color: Color(0xff1b1b1b),
                           child: Column(
                             children: <Widget>[
                               Padding(
                                 padding: const EdgeInsets.only(top: 10),
                                 child: Container(
-                                  height: height/1.761764656/5,
+                                  height: height*80,
                                   child: Row(
                                     children: <Widget>[
                                       Padding(
@@ -82,7 +82,7 @@ class DOC extends StatelessWidget{
                                             left: 10.0),
                                         child: Container(
                                             width: 6,
-                                            height: height/1.761764656/8,
+                                            height: height*50,
                                             color: Color(0xff860000)),
                                       ),
                                       Padding(
@@ -92,7 +92,7 @@ class DOC extends StatelessWidget{
                                           "D.O.C : Dawn Of Crisis",
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
-                                              fontSize: height/1.761764656/40*3,
+                                              fontSize: width*30,
                                               color: Colors.white),
                                         ),
                                       ),
@@ -105,8 +105,8 @@ class DOC extends StatelessWidget{
                                               padding: EdgeInsets.only(
                                                   right: 10),
                                               child: Container(
-                                                height: 50,
-                                                width: 50,
+                                                height: width*50,
+                                                width: width*50,
                                                 child: Image.asset(
                                                     "assets/godown.gif"),
                                               ),
@@ -124,10 +124,10 @@ class DOC extends StatelessWidget{
                                   child: Center(
                                     child: Container(
                                       child: Text(
-                                        "Success is never an accident, it is always the result of a commitment to excellence, intelligent planning, and focused effort. We Team Conatus were successful in conducting \"DOC~ Dawn of Crisis\", the highest participating event of the year with our hard work and enthusiasm. We live by one motto \"We work hard, we party hard, when we go to work, we know what we are doing and we do it to the best of our abilities, and when we party we follow the same rulebook.",
+                                        "Success is never an accident, it is always the result of a commitment to excellence, intelligent planning, and focused effort. We Team Conatus were successful in conducting \"DOC~ Dawn of Crisis\", the highest participating event of the year with our hard work and enthusiasm. We live by one motto \"We work hard, we party hard, when we go to work, we know what we are doing and we do it to the best of our abilities, and when we party we follow the same rulebook.\" ",
                                         style: TextStyle(
                                             color: Colors.white70,
-                                            fontSize: height/1.761764656/400*17),
+                                            fontSize: width*17),
                                       ),
                                     ),
                                   )),
@@ -158,7 +158,7 @@ class DOC extends StatelessWidget{
                                       "Suggested Videos :",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: height/1.761764656/16,
+                                          fontSize: width*25,
                                           fontWeight: FontWeight.bold),
                                     ),
                                   ],
@@ -180,13 +180,13 @@ class DOC extends StatelessWidget{
                                               elevation: 50,
                                               clipBehavior: Clip.antiAlias,
                                               child: Container(
-                                                height: height/1.761764656/2,
-                                                width: height/1.761764656/4*3,
+                                                height: height*200,
+                                                width: width*300,
                                                 child: Stack(
                                                   children: <Widget>[
                                                     Container(
-                                                      height: height/1.761764656/2,
-                                                      width: height/1.761764656/4*3,
+                                                      height: height*200,
+                                                      width: width*300,
                                                       color: Colors.black26,
                                                     ),
                                                     Center(
@@ -194,10 +194,10 @@ class DOC extends StatelessWidget{
                                                     ),
                                                     Positioned(bottom: 0,
                                                       child: Container(
-                                                        height: 60,
-                                                        width: height/1.761764656/4*3,
+                                                        height: height*60,
+                                                        width: width*300,
                                                         color: Color(0xaa000000),
-                                                        child: Center(child: Text("DOC Final intro",style: TextStyle(color:Colors.white,fontSize: 18),)),
+                                                        child: Center(child: Text("DOC Final intro",style: TextStyle(color:Colors.white,fontSize: width*18),)),
                                                       ),
                                                     ),
 
@@ -220,13 +220,13 @@ class DOC extends StatelessWidget{
                                                 elevation: 50,
                                                 clipBehavior: Clip.antiAlias,
                                                 child: Container(
-                                                  height: height/1.761764656/2,
-                                                  width: height/1.761764656/4*3,
+                                                  height: height*200,
+                                                  width: width*300,
                                                   child: Stack(
                                                     children: <Widget>[
                                                       Container(
-                                                        height: height/1.761764656/2,
-                                                        width: height/1.761764656/4*3,
+                                                        height: height*200,
+                                                        width: width*300,
                                                         color: Colors.black26,
                                                       ),
                                                       Center(
@@ -235,9 +235,9 @@ class DOC extends StatelessWidget{
                                                       Positioned(bottom: 0,
                                                         child: Container(
                                                           height: 60,
-                                                          width: height/1.761764656/4*3,
+                                                          width: width*300,
                                                           color: Color(0xaa000000),
-                                                          child: Center(child: Text("DOC Teaser",style: TextStyle(color:Colors.white,fontSize: 18),)),
+                                                          child: Center(child: Text("DOC Teaser",style: TextStyle(color:Colors.white,fontSize: width*18),)),
                                                         ),
                                                       ),
 
