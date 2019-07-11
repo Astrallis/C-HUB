@@ -61,7 +61,7 @@ class TeamPage extends StatelessWidget {
                       backgroundColor: Colors.black54
                     ),),
                   centerTitle: true,
-                  background: Image.asset("assets/hp1.jpg",fit: BoxFit.fitWidth,),
+                  background: Image.asset("assets/hp2.jpg",fit: BoxFit.fitWidth,),
                 ),
               ),
               SliverFixedExtentList(
@@ -91,8 +91,7 @@ class TeamPage extends StatelessWidget {
                                           Navigator.push(context, MaterialPageRoute(builder: (context) => (Coordinators())),);
                                         }
                                         else
-
-                                        {
+                                          {
                                           final snackBar2 = SnackBar(
                                             content: Text('Not Connected'),
                                           );

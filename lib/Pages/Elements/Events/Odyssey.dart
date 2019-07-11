@@ -58,7 +58,7 @@ class Odyssey extends StatelessWidget{
                 ),
               )),
           SliverFixedExtentList(
-              itemExtent: 2000,
+              itemExtent: height*1700,
               delegate: SliverChildListDelegate([
                 Scaffold(
                   backgroundColor: Colors.black,

@@ -74,8 +74,8 @@ class ThirdYear extends StatelessWidget{
                                         Navigator.push(
                                             context,
                                             new MaterialPageRoute(
-                                                builder: (context) => new AboutCoordinator(
-                                                    coordinatorModel: new CoordinatorModel(
+                                                builder: (context) => AboutCoordinator(
+                                                    coordinatorModel: CoordinatorModel(
                                                         snapshot
                                                             .data
                                                             .documents[

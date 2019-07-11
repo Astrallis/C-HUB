@@ -31,7 +31,7 @@ class ConatusDrawer extends StatelessWidget {
               leading: Icon(Icons.star, color: Colors.white,),
               title: Text("Rate-Us", style: TextStyle(color: Colors.white)),
               onTap: () {
-           //     Navigator.push(context, MaterialPageRoute(builder: (context) => Dev()),);
+
               },
             ),
             _getContainer(),

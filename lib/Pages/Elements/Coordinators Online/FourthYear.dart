@@ -32,7 +32,7 @@ class FourthYear extends StatelessWidget{
                       child: Column(
                         children: <Widget>[
                           Padding(
-                            padding: EdgeInsets.only(top: height/23.49019542/2,bottom: height/23.49019542*2 ),
+                            padding: EdgeInsets.only(top: height/23.49019542/2,bottom: height/23.49019542/2 ),
                             child: Row(
                               children: <Widget>[
                                 Padding(

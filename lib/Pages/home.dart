@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animap/drawer.dart';
-import 'package:animap/constants.dart';
+
 
 class Home extends StatelessWidget {
   @override
+
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width/423.5293998850261;
     double height = MediaQuery.of(context).size.height/704.705862586474;
@@ -101,7 +102,7 @@ class Home extends StatelessWidget {
                             child: Container(
                               width: width*423.5293998850261,
                               color: Colors.black,
-                              child: Image.asset(("assets/hp1.jpg"))
+                              child: Image.asset(("assets/hp2.jpg"))
                             )
                         ),
 

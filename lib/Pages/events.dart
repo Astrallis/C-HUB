@@ -7,6 +7,7 @@ import 'package:animap/Pages/Elements/Events/DOC.dart';
 
 class Events extends StatelessWidget {
   @override
+
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(accentColor: Color(0xff860000)),

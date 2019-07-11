@@ -11,17 +11,21 @@ void main() async {
 
   class MyApp extends StatelessWidget{
   @override
+
   Widget build(BuildContext context) {
     // TODO: implement build
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-    return MaterialApp(
-      theme: ThemeData(
-          accentColor: Color(0xff860000)
-      ),
-      home: SplaashScreen(),
-    );
+
+
+      return MaterialApp(
+        theme: ThemeData(
+            accentColor: Color(0xff860000)
+        ),
+        home: SplaashScreen(),
+      );
+
   }
   }

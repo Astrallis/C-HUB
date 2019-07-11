@@ -13,6 +13,7 @@ class Contact extends StatelessWidget {
     }
   }
   @override
+
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width/423.5293998850261;
     double height = MediaQuery.of(context).size.height/704.705862586474;
@@ -139,7 +140,7 @@ class Contact extends StatelessWidget {
                               _launchURL(
                                   'https://www.facebook.com/conatus.akg');
                             },
-                            child: Card(elevation:100,color: Color(0xff000000),clipBehavior: Clip.antiAlias,child: Container(height: height*40,width: width*150,child: Row(
+                            child: Card(elevation:100,color: Color(0xff1b1b1b),clipBehavior: Clip.antiAlias,child: Container(height: height*40,width: width*150,child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
@@ -167,7 +168,7 @@ class Contact extends StatelessWidget {
                                     _launchURL(
                                         'https://www.instagram.com/conatus.akg');
                                   },
-                                  child: Card(elevation:100,color: Color(0xff000000),clipBehavior: Clip.antiAlias,child: Container(height: height*40,width: width*150,child: Row(
+                                  child: Card(elevation:100,color: Color(0xff1b1b1b),clipBehavior: Clip.antiAlias,child: Container(height: height*40,width: width*150,child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
@@ -208,113 +209,3 @@ class Contact extends StatelessWidget {
     );
   }
 }
-
-/*
-Padding(
-padding: const EdgeInsets.only(top:20.0),
-child: Container(
-width: width*423.5293998850261,
-height: height*70,
-
-child: Center(
-child: Row(
-mainAxisAlignment: MainAxisAlignment.center,
-children: <Widget>[
-Icon(Icons.call,color: Colors.white,size: width*25,),
-Padding(
-padding: const EdgeInsets.only(left:8.0),
-child: Text("Call us on:",style: TextStyle(fontSize: width*21,color:Colors.white,fontWeight: FontWeight.bold,wordSpacing: 2),textAlign: TextAlign.center,),
-),
-Container(width: width*150,child: Text("7007799127  8751244551",style: TextStyle(fontSize: width*21,color:Colors.white,wordSpacing: 2),textAlign: TextAlign.center,)),
-],
-),
-),
-),
-),
-
-Padding(
-padding: const EdgeInsets.only(top:30.0),
-child: Container(
-width: width*423.5293998850261,
-
-
-child: Center(
-child: Row(
-mainAxisAlignment: MainAxisAlignment.center,
-children: <Widget>[
-Icon(Icons.mail,color: Colors.white,size: width*25,),
-Padding(
-padding: const EdgeInsets.only(left:8.0,right: 8.0),
-child: Text("Email:",style: TextStyle(fontSize: width*21,color:Colors.white,fontWeight: FontWeight.bold,wordSpacing: 2),textAlign: TextAlign.center,),
-),
-Container(width: width*200,child: Text("teamconatus@gmail.com",style: TextStyle(fontSize: width*17,color:Colors.white,wordSpacing: 2),textAlign: TextAlign.center,)),
-],
-),
-),
-),
-),
-
-Padding(
-padding: const EdgeInsets.only(top:30.0),
-child: Container(
-width: width*423.5293998850261,
-
-
-child: Center(
-child: Row(
-mainAxisAlignment: MainAxisAlignment.center,
-children: <Widget>[
-Icon(Icons.location_city,color: Colors.white,size: width*25,),
-Padding(
-padding: const EdgeInsets.only(left:8.0,right: 8.0),
-child: Text("Address:",style: TextStyle(fontSize: width*21,color:Colors.white,fontWeight: FontWeight.bold,wordSpacing: 2),textAlign: TextAlign.center,),
-),
-Container(width: 250,child: Text("Ajay Kumar Garg Engineering College, Ghaziabad, Hapur Bypass, U.P, PIN:201009",style: TextStyle(fontSize: width*15,color:Colors.white,wordSpacing: 2),textAlign: TextAlign.center,)),
-],
-),
-),
-),
-),
-
-Padding(
-padding: const EdgeInsets.only(top:40.0),
-child: Container(
-width: width*423.5293998850261,
-
-
-child: Center(
-child: Row(
-mainAxisAlignment: MainAxisAlignment.center,
-children: <Widget>[
-Icon(MaterialCommunityIcons.getIconData("facebook"),color: Colors.white,size: width*25,),
-Padding(
-padding: const EdgeInsets.only(left:8.0),
-child: Text("www.facebook.com/conatus.akg",style: TextStyle(fontSize: width*21,color:Colors.white,wordSpacing: 2),textAlign: TextAlign.center,),
-),
-
-],
-),
-),
-),
-),
-Padding(
-padding: const EdgeInsets.only(top:20.0),
-child: Container(
-width:width*423.5293998850261,
-
-
-child: Center(
-child: Row(
-mainAxisAlignment: MainAxisAlignment.center,
-children: <Widget>[
-Icon(MaterialCommunityIcons.getIconData("instagram"),color: Colors.white,size:width* 25,),
-Padding(
-padding: const EdgeInsets.only(left:8.0),
-child: Text("www.instagram.com/conatus.akg",style: TextStyle(fontSize: width*21,color:Colors.white,wordSpacing: 2),textAlign: TextAlign.center,),
-),
-
-],
-),
-),
-),
-),*/

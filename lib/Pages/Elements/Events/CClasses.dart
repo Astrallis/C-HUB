@@ -60,7 +60,7 @@ class CClasses extends StatelessWidget{
                 ),
               )),
           SliverFixedExtentList(
-              itemExtent: 1500,
+              itemExtent: height*1200,
               delegate: SliverChildListDelegate([
                 Scaffold(
                   backgroundColor: Colors.black,
