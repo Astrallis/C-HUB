@@ -1,3 +1,4 @@
+import 'package:animap/Pages/coordinators.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:bmnav/bmnav.dart' as bmnav;
@@ -14,12 +15,19 @@ void main() {
 
 class HomePage extends StatefulWidget {
   @override
-  HomePageState createState() => HomePageState();
+  final DestoP destoP;
+  HomePage({this.destoP});
+
+  HomePageState createState() => HomePageState(desto: Desto(destoP.i));
 }
 class HomePageState extends State<HomePage> {
-  int currentTab = 0;
+
+
+  final Desto desto;
+  HomePageState({this.desto});
+
   final List<Widget> screens = [
-    Home(), Events(), TeamPage(), Contact(),
+    Home(), Events(), TeamPage(), Contact(), Coordinators()
   ];
   Widget currentScreen = Home();
   final PageStorageBucket bucket = PageStorageBucket();
@@ -35,7 +43,7 @@ class HomePageState extends State<HomePage> {
         content: Container(
             height: 100,width: 100,color: Color(0x00000000),
           child: Center(
-            child: Icon(Icons.exit_to_app,color: Colors.red,size: 100,),
+            child: Icon(Icons.exit_to_app,color: Color(0xff860000),size: 100,),
           ),
 
         ),
@@ -54,23 +62,22 @@ class HomePageState extends State<HomePage> {
         false;
   }
   Widget build(BuildContext ctx) {
+
     return WillPopScope(
       onWillPop: () => _exitApp(context),
       child: Scaffold(
         backgroundColor: Color(0xff1b1b1b),
 
-        body: PageStorage(child: currentScreen, bucket: bucket),
+        body: PageStorage(child: screens[desto.i], bucket: bucket),
         bottomNavigationBar: bmnav.BottomNav(
           color: Color(0xff1b1b1b),
           iconStyle: bmnav.IconStyle(onSelectColor: Color(0xff860000), size: 25,onSelectSize: 25,color: Colors.white),
           labelStyle: bmnav.LabelStyle(onSelectTextStyle: TextStyle(color: Color(0xff860000), fontSize: 10), textStyle: TextStyle(fontSize:10, color: Colors.white54) ),
 
-          index: currentTab,
+          index: desto.i==4?2:desto.i,
           onTap: (i) {
-            setState(() {
-              currentTab = i;
-              currentScreen = screens[i];
-            });
+            Navigator.pushReplacement(context, new MaterialPageRoute(
+                builder: (context) => HomePage(destoP: DestoP(i),)));
           },
           items: [
             bmnav.BottomNavItem(Icons.home, label: 'Home'),
@@ -84,4 +91,15 @@ class HomePageState extends State<HomePage> {
   }
 }
 
+class Desto
+{
+  final int i;
+  Desto(this.i);
+}
+
+class DestoP
+{
+  int i;
+  DestoP(this.i);
+}
 

@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -5,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:animap/Pages/aboutCoordinator.dart';
 import 'package:animap/Pages/models/Coordinator_model.dart';
+
 
 
 class ThirdYear extends StatelessWidget{
@@ -59,6 +61,7 @@ class ThirdYear extends StatelessWidget{
                               ],
                             ),
                           ),
+
                           for (int i = 0;
                           i < snapshot.data.documents.length;
                           i = i + 2)
@@ -94,7 +97,7 @@ class ThirdYear extends StatelessWidget{
                                       },
                                       child: Container(
                                         color: Color(0x00000000),
-                                       // height: height/35.23529313*10,
+                                        // height: height/35.23529313*10,
                                         width: (width - 80) / 2,
                                         child: Column(
                                           children: <Widget>[
@@ -186,7 +189,7 @@ class ThirdYear extends StatelessWidget{
                                         },
                                         child: Container(
                                             color: Color(0x00000000),
-                                         //   height: height/35.23529313*10,
+                                            //   height: height/35.23529313*10,
                                             width:
                                             (width - 80) / 2,
                                             child: Column(
@@ -252,38 +255,39 @@ class ThirdYear extends StatelessWidget{
                                       ),
                                     ),
 
-                                    if(i==14)
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                            right: width/52.94117499, left: width/42.35293999),
+                                  if(i==14)
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          right: width/52.94117499, left: width/42.35293999),
 
-                                          child: Container(
-                                              color: Color(0x00000000),
-                                              //   height: height/35.23529313*10,
-                                              width:
-                                              (width - 80) / 2,
-                                              child: Column(
-                                                children: <Widget>[
-                                                  Padding(
-                                                    padding:
-                                                    EdgeInsets.all(
-                                                        width/42.35293999),
+                                      child: Container(
+                                          color: Color(0x00000000),
+                                          //   height: height/35.23529313*10,
+                                          width:
+                                          (width - 80) / 2,
+                                          child: Column(
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                EdgeInsets.all(
+                                                    width/42.35293999),
 
-                                                      child:
-                                                      Container(
-                                                        color: Color(0xff1b1b1b),
+                                                child:
+                                                Container(
+                                                  color: Color(0xff1b1b1b),
 
-                                                    ),
-                                                  ),
+                                                ),
+                                              ),
 
-                                                ],
-                                              )),
-                                        ),
+                                            ],
+                                          )),
+                                    ),
 
 
                                 ],
                               ),
                             )
+
                         ],
                       ),
                     );
@@ -293,3 +297,6 @@ class ThirdYear extends StatelessWidget{
     );
   }
 }
+
+/*
+* */

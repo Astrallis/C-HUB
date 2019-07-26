@@ -20,11 +20,12 @@ class SplaashScreen extends StatelessWidget {
             child: Center(
 
               child: Container(
+                color: Color(0xff595959),
                 height: 400,
                 width: 400,
                 child: SplashScreen(
                     seconds: 5,
-                    navigateAfterSeconds: HomePage(),
+                    navigateAfterSeconds: HomePage(destoP: DestoP(0),),
                     image: new Image.asset("assets/fastsplash.gif",width:400.0,fit: BoxFit.contain,),
 
                     backgroundColor: Color(0xff595959),

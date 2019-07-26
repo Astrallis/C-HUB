@@ -1,8 +1,10 @@
+
 import 'package:animap/drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:connectivity/connectivity.dart';
-import 'coordinators.dart';
+import 'package:animap/bottom nav.dart';
+
 
 
 class TeamPage extends StatelessWidget {
@@ -33,8 +35,10 @@ class TeamPage extends StatelessWidget {
     if (g == 2 || g == 3) {
       return true;
     } else
-
+     if(g ==1)
       return false;
+     else
+       return null;
 
   }
 
@@ -86,17 +90,20 @@ class TeamPage extends StatelessWidget {
                                     builder: (context) => RaisedButton(
                                       onPressed: () {
                                         _checkInternetConnectivity();
-                                        if(testWid())
-                                        {
-                                          Navigator.push(context, MaterialPageRoute(builder: (context) => (Coordinators())),);
-                                        }
-                                        else
+                                        if(testWid()!=null)
                                           {
-                                          final snackBar2 = SnackBar(
-                                            content: Text('Not Connected'),
-                                          );
-                                          Scaffold.of(context).showSnackBar(snackBar2);
-                                        }
+                                            if(testWid())
+                                            {
+                                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => (HomePage(destoP: DestoP(4)))),);
+                                            }
+                                            else
+                                            {
+                                              final snackBar2 = SnackBar(
+                                                content: Text('Not Connected'),
+                                              );
+                                              Scaffold.of(context).showSnackBar(snackBar2);
+                                            }
+                                          }
                                       },
                                       child: Text("CLICK HERE",style: TextStyle(color: Colors.white),),
                                       color: Color(0xff860000),

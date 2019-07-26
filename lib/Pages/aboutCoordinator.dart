@@ -124,28 +124,7 @@ class AboutCoordinator extends StatelessWidget{
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top:20.0),
-                    child: GestureDetector(
-                      onTap:(){ Navigator.pop(context,true);},
-                      child: Card(
-                        clipBehavior: Clip.antiAlias,
-                        child: Container(
-                          height: height*50,width: width*423.5293998850261,
-                          color: Color(0xff860000),
-                          child: Center(
-                            child: Text(
-                              "Click here to return to Team Page",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  )
 
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
 
 
                 ],

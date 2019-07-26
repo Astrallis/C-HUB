@@ -1,3 +1,4 @@
+import 'package:animap/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -24,46 +25,28 @@ class CoordinatorsState extends State<Coordinators> with SingleTickerProviderSta
     super.dispose();
   }
 
-  Future<bool> _Back(BuildContext context) {
-    return showDialog(
-      context: context,
-      child: new AlertDialog(
-        title: new Text('Exit to main App',style: TextStyle(color: Colors.white),textAlign: TextAlign.center,),
-        backgroundColor: Color(0xff1b1b1b),
-        //content: new Text('We hate to see you leave...'),
-        actions: <Widget>[
-          new FlatButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: new Text('NO',style: TextStyle(color: Colors.white),textAlign: TextAlign.center,),
-          ),
-          new FlatButton(
-            onPressed: () => Navigator.of(context).pop(true),
-            child: new Text('YES',style: TextStyle(color: Colors.white),textAlign: TextAlign.center,),
-          ),
-        ],
-      ),
-    ) ??
-        false;
-  }
+
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
-    return WillPopScope(
-      onWillPop: ()=> _Back(context),
-      child: MaterialApp(
+    double width = MediaQuery.of(context).size.width/423.5293998850261;
+    double height = MediaQuery.of(context).size.height/704.705862586474;
+    return MaterialApp(
             theme: ThemeData(
               accentColor: Color(0xff860000),
             ),
               home: Scaffold(
+                drawer: ConatusDrawer(),
                 appBar: AppBar(
                   title: Text(
                     'The Team',
                     style: TextStyle(
                       fontFamily: "Helvetica",
-                      fontSize: width*30,
+                      fontSize: width*25,
+                      color: Colors.white
                     ),
-                  ),                    centerTitle: true,backgroundColor: Color(0x00000000),
+                  ),
+                  centerTitle: true,
+                  backgroundColor: Color(0x00000000),
 
               ),
             backgroundColor: Colors.black,
@@ -75,7 +58,7 @@ class CoordinatorsState extends State<Coordinators> with SingleTickerProviderSta
                       floating: false,
                       pinned: false,
                       backgroundColor: Color(0xff000000),
-                      expandedHeight: height / 2.81882345,
+                      expandedHeight: height* 250,
                       flexibleSpace: FlexibleSpaceBar(
 
                         centerTitle: true,
@@ -107,7 +90,7 @@ class CoordinatorsState extends State<Coordinators> with SingleTickerProviderSta
                 ),
               ),
             ),
-          )),
+          )
     );
 
 
