@@ -48,7 +48,7 @@ class TeamPage extends StatelessWidget {
     double width = MediaQuery.of(context).size.width/423.5293998850261;
     double height = MediaQuery.of(context).size.height/704.705862586474;
     return Scaffold(
-      drawer: ConatusDrawer(),
+
         body: Container(
             child: CustomScrollView(slivers: <Widget>[
               SliverAppBar(
@@ -57,13 +57,7 @@ class TeamPage extends StatelessWidget {
                 backgroundColor: Color(0xff000000),
                 expandedHeight: height*300,
                 flexibleSpace: FlexibleSpaceBar(
-                  title: Text(
-                    'The Team',
-                    style: TextStyle(
-                      fontFamily: "Helvetica",
-                      fontSize: width*25,
-                      backgroundColor: Colors.black54
-                    ),),
+
                   centerTitle: true,
                   background: Image.asset("assets/hp2.jpg",fit: BoxFit.fitWidth,),
                 ),

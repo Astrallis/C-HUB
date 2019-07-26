@@ -12,12 +12,7 @@ class Events extends StatelessWidget {
     return MaterialApp(
         theme: ThemeData(accentColor: Color(0xff860000)),
         home: Scaffold(
-          appBar: AppBar(
-            title: Text("EVENTS"),
-            centerTitle: true,
-            backgroundColor: Colors.black,
-            elevation: 0,
-          ),
+
           drawer: ConatusDrawer(),
           body: PageView(
             children: <Widget>[

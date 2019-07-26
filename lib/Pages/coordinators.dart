@@ -35,20 +35,9 @@ class CoordinatorsState extends State<Coordinators> with SingleTickerProviderSta
               accentColor: Color(0xff860000),
             ),
               home: Scaffold(
-                drawer: ConatusDrawer(),
-                appBar: AppBar(
-                  title: Text(
-                    'The Team',
-                    style: TextStyle(
-                      fontFamily: "Helvetica",
-                      fontSize: width*25,
-                      color: Colors.white
-                    ),
-                  ),
-                  centerTitle: true,
-                  backgroundColor: Color(0x00000000),
 
-              ),
+
+
             backgroundColor: Colors.black,
             body: Scaffold(
               body: Container(

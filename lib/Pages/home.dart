@@ -12,19 +12,10 @@ class Home extends StatelessWidget {
 
     return MaterialApp(
       theme: ThemeData(
-        accentColor: Color(0xff860000)
+        accentColor: Color(0xff860000),
       ),
       home: Scaffold(drawer: ConatusDrawer(),
-        appBar: AppBar(
-          title:  Text(
-            'Home',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: "Helvetica",
-              fontSize: width*25,
-            ),
-          ),centerTitle: true,backgroundColor:Color(0xff000000),
-        ),
+
         body: MaterialApp(
           home: Scaffold(
             body: CustomScrollView(

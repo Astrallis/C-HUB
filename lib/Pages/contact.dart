@@ -18,15 +18,7 @@ class Contact extends StatelessWidget {
     double width = MediaQuery.of(context).size.width/423.5293998850261;
     double height = MediaQuery.of(context).size.height/704.705862586474;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xff1b1b1b),
-        elevation: 0,
-        title: Text(
-            "Contact Details",
-            textAlign: TextAlign.center,
-          ),
-        centerTitle: true,
-      ),
+
 
       backgroundColor: Color(0xff1b1b1b),
       drawer: ConatusDrawer(),

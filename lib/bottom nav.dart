@@ -1,4 +1,5 @@
 import 'package:animap/Pages/coordinators.dart';
+import 'package:animap/drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:bmnav/bmnav.dart' as bmnav;
@@ -9,6 +10,9 @@ import 'Pages/TeamPage.dart';
 
 void main() {
   runApp(MaterialApp(
+    theme: ThemeData(
+      accentColor: Color(0xff860000)
+    ),
     home: HomePage(),
   ));
 }
@@ -28,6 +32,9 @@ class HomePageState extends State<HomePage> {
 
   final List<Widget> screens = [
     Home(), Events(), TeamPage(), Contact(), Coordinators()
+  ];
+  final List<String> appBarTitle = [
+    "Home","Events","Our Team","Contact us","Coordinator Details"
   ];
   Widget currentScreen = Home();
   final PageStorageBucket bucket = PageStorageBucket();
@@ -66,6 +73,8 @@ class HomePageState extends State<HomePage> {
     return WillPopScope(
       onWillPop: () => _exitApp(context),
       child: Scaffold(
+        appBar: AppBar(backgroundColor: Color(0xff000000),title: Text(appBarTitle[desto.i],style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),), centerTitle: true, ),
+        drawer: ConatusDrawer(),
         backgroundColor: Color(0xff1b1b1b),
 
         body: PageStorage(child: screens[desto.i], bucket: bucket),
