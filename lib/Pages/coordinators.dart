@@ -30,11 +30,7 @@ class CoordinatorsState extends State<Coordinators> with SingleTickerProviderSta
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width/423.5293998850261;
     double height = MediaQuery.of(context).size.height/704.705862586474;
-    return MaterialApp(
-            theme: ThemeData(
-              accentColor: Color(0xff860000),
-            ),
-              home: Scaffold(
+    return Scaffold(
 
 
 
@@ -64,11 +60,8 @@ class CoordinatorsState extends State<Coordinators> with SingleTickerProviderSta
                           child: Column(children: <Widget>[
                             Mentors(),
 
-                            // 4th year Coding start
-
                             FourthYear(),
 
-                            // 4th year Coding end
                             ThirdYear()
 
                           ]),
@@ -79,7 +72,7 @@ class CoordinatorsState extends State<Coordinators> with SingleTickerProviderSta
                 ),
               ),
             ),
-          )
+
     );
 
 
