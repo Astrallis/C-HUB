@@ -58,7 +58,7 @@ class DOC extends StatelessWidget{
                 ),
               )),
           SliverFixedExtentList(
-              itemExtent: height*1600,
+              itemExtent: height*1500,
               delegate: SliverChildListDelegate([
                 Scaffold(
                   backgroundColor: Colors.black,

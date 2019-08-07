@@ -32,8 +32,6 @@ class CoordinatorsState extends State<Coordinators> with SingleTickerProviderSta
     double height = MediaQuery.of(context).size.height/704.705862586474;
     return Scaffold(
 
-
-
             backgroundColor: Colors.black,
             body: Scaffold(
               body: Container(

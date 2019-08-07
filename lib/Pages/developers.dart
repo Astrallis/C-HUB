@@ -30,6 +30,13 @@ class UserProfilePage extends StatelessWidget {
   final String _bioB =
       "\"Hi, Naimish here. My life majorly revolves around internet. I majorly work on projects related to mobile and web development. Learning and exploring new technologies is something which I never miss in my free time. \"";
  final String _urlB="https://firebasestorage.googleapis.com/v0/b/conatusinfo-8341f.appspot.com/o/coordinators%2F1613008.jpeg?alt=media&token=ecd36084-c676-4d30-827c-eca683d6e45a";
+  final String _fullNameC = "Amritansh Kumar";
+  final String _statusC = "Backend Developer";
+  final String _bioC =
+      "\"Hi this is Amritansh, I am a simple guy and a true believer of hard work, I try to complete my work with full determination,focus and give my support to my team members and anyone in need. I am an Android developer and currently doing backend developement with laravel.\"";
+  final String _urlC="https://firebasestorage.googleapis.com/v0/b/conatusinfo-8341f.appspot.com/o/coordinators%2F1610012.jpeg?alt=media&token=8319ef65-37b8-470e-b41d-d5d3003009ee";
+
+
   Widget _buildCoverImage(Size screenSize) {
     return Container(
       height: screenSize.height / 2.6,
@@ -237,16 +244,23 @@ class UserProfilePage extends StatelessWidget {
                           Positioned(
                             top: height*100,
                             left: 0,
-                            child: Row(mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                  height: 40,width: 40,
-                                  child:RotatedBox(quarterTurns: 2,child: Image.asset("assets/goright.gif",fit: BoxFit.scaleDown,)),
+                             child: Container(
+                                height: 40,width: 40,
+                                child:RotatedBox(quarterTurns: 2,child: Image.asset("assets/goright.gif",fit: BoxFit.scaleDown,)),
 
-                                )
-                              ],
-                            ),
+                              )
                           ),
+                          Positioned(
+                              top: height*100,
+                              right: 0,
+                              child: Container(
+                                height: 40,width: 40,
+                                child:RotatedBox(quarterTurns: 0,child: Image.asset("assets/goright.gif",fit: BoxFit.scaleDown,)),
+
+                              )
+                          ),
+
+
                           Center(child: _buildProfileImage(height,width,_urlB)),
                         ],
                       ),
@@ -257,6 +271,50 @@ class UserProfilePage extends StatelessWidget {
                       _buildStatus(context,_statusB),
 
                       _buildBio(context,_bioB),
+                      _buildSeparator(screenSize),
+                      SizedBox(height: 10.0),
+
+
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          Stack(
+            children: <Widget>[
+              _buildCoverImage(screenSize),
+              SafeArea(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(height: screenSize.height / 8),
+                      Stack(
+                        children: <Widget>[
+                          Positioned(
+                            top: height*100,
+                            left: 0,
+                            child: Row(mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                  height: 40,width: 40,
+                                  child:RotatedBox(quarterTurns: 2,child: Image.asset("assets/goright.gif",fit: BoxFit.scaleDown,)),
+
+                                )
+                              ],
+                            ),
+                          ),
+                          Center(child: _buildProfileImage(height,width,_urlC)),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top:18.0),
+                        child: _buildFullName(_fullNameC),
+                      ),
+                      _buildStatus(context,_statusC),
+
+                      _buildBio(context,_bioC),
                       _buildSeparator(screenSize),
                       SizedBox(height: 10.0),
 

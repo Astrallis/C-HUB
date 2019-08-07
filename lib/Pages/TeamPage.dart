@@ -7,7 +7,12 @@ import 'package:animap/bottom nav.dart';
 
 
 
-class TeamPage extends StatelessWidget {
+class TeamPage extends StatefulWidget {
+  @override
+  _TeamPageState createState() => _TeamPageState();
+}
+
+class _TeamPageState extends State<TeamPage> {
   int i;
 
   _checkInternetConnectivity() async {
@@ -19,6 +24,11 @@ class TeamPage extends StatelessWidget {
     } else if (result == ConnectivityResult.wifi) {
       setI(3);
     }
+  }
+  initState() {
+    testWid();
+    super.initState();
+    _TeamPageState();
   }
 
   setI(int a) {
@@ -41,7 +51,6 @@ class TeamPage extends StatelessWidget {
        return null;
 
   }
-
 
   @override
   Widget build(BuildContext context) {
